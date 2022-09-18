@@ -43,22 +43,21 @@
     display : flex;
     flex-wrap : wrap;
     flex-direction: row;
-	padding: 10px;
+	padding-right: 200px;
+    padding-left: 200px;
 	background: #fff;
-	margin: 45px auto;
-    margin-left: 250px;
-    margin-right: 250px;
+	margin: auto;
+    
     justify-content: center;
     margin-top: 0%;
 }
 .content {
-    display : flex;
-    flex-wrap : wrap;
+
 	color: rgb(0, 0, 0);
 	padding: 15px;
 	margin: 5px;	
 	background: #8B98A8;
-    width: 375px;
+    width: 450px;
     height: 115px;
     display: flex;
     justify-content: center;
@@ -73,12 +72,11 @@
     margin-top: 0%;
 }
 .button{
+    border: none;
     background: #CFDCEC;
     width: 95px;
     height: 35px;
-    margin-top: 0%;
-    display: flex;
-    justify-content: center;    
-    align-items: center;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
     font-size: 5pt;
 }

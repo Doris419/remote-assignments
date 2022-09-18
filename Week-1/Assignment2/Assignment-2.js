@@ -15,7 +15,7 @@ function countAandB(input) {
         str += input[i];
         array.push(str.charCodeAt(i)-96);
     }
-    return `[${array.join(', ')}]`;
+    return array;
     }
     let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
     console.log(countAandB(input1)); // should print 4 (3 ‘a’ letters and 1 ‘b’ letter)
