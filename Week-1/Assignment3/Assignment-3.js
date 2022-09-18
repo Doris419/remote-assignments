@@ -11,11 +11,13 @@ function findPosition(numbers, target) {
     let a = 0;
     let b = 0;
     for(let i=0;i<numbers.length;i++){
-        if(numbers[i] == target){
-            a = numbers.indexOf(target);
-        }else{
-            b++;
-        }
+        
+            if(numbers[i] == target){
+                a = i;
+                break;
+            }else{
+                b++;
+            }   
     }
     if(b===(numbers.length)){
         a = -1;

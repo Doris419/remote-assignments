@@ -1,4 +1,5 @@
 function count(input) {
+    let obj = {};
     let word = [];
     let num = [];
     for(let i=0;i<input.length;i++){
@@ -10,23 +11,18 @@ function count(input) {
             num[pos]+=1;
         }
     }
-    let array = [];
-    let output = [];
-    let k = 0;
-    for(let i=0;i<word.length;i++){
-        array.push([word[i],num[i]]);
-        output += word[i]+':'+num[i];
-        if(k<word.length-1){
-            output+=', ';
-            k++;
-        }
+    for(let i=0;i<num.length;i++){
+        obj[word[i]] = num[i];
     }
-    return '{'+output+'}';
+    
+    return obj;
 }
     let input1 = ["a", "b", "c", "a", "c", "a", "x"];
     console.log(count(input1));
     // should print {a:3, b:1, c:2, x:1}
+
 function groupByKey(input) {
+    let obj = [];
     let word = [];
     let num = [];
     for(let i=0;i<input.length;i++){
@@ -38,19 +34,12 @@ function groupByKey(input) {
             num[pos]+=input[i].value;
         }
     }
-    let array = [];
-    let output = [];
-    let k = 0;
-    for(let i=0;i<word.length;i++){
-        array.push([word[i],num[i]]);
-        output += word[i]+':'+num[i];
-        if(k<word.length-1){
-            output+=', ';
-            k++;
-        }
+    
+    for(let i=0;i<num.length;i++){
+        obj[word[i]] = num[i];
     }
-    return '{'+output+'}';
-    //console.log(input[value]);
+    
+    return obj;
 }
     let input2 = [
     { key: "a", value: 3 },

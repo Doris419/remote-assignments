@@ -1,12 +1,11 @@
 *{
     margin:0;
-    max-width: 1200px;
+   
 }
 .header{
     background: #f5f2f2;
     display: flex;
     flex-wrap: wrap;
-    width: 1200px;
     height: 25px;
 }
 .header1{
@@ -26,7 +25,7 @@
 }
 .nav{
     background: #CFDCEC;
-    width : 1200px;
+    max-width: 100%;
     height: 150px;
     display: flex;
     justify-content: center;    
@@ -34,7 +33,7 @@
 }
 .section{
     background: #ffffff;
-    width : 1200px;
+    max-width: 100%;
     height: 100px;
     display: flex;
     justify-content: center;    
@@ -47,10 +46,14 @@
 	padding: 10px;
 	background: #fff;
 	margin: 45px auto;
+    margin-left: 250px;
+    margin-right: 250px;
     justify-content: center;
     margin-top: 0%;
 }
 .content {
+    display : flex;
+    flex-wrap : wrap;
 	color: rgb(0, 0, 0);
 	padding: 15px;
 	margin: 5px;	

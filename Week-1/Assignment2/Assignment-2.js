@@ -10,18 +10,10 @@ function countAandB(input) {
 
     function toNumber(input) {
     let array = [];
+    let str = "";
     for(let i=0;i<input.length;i++){
-        if(input[i]=='a'){
-            array.push('1');
-        }else if(input[i]=='b'){
-            array.push('2');
-        }else if(input[i]=='c'){
-            array.push('3');
-        }else if(input[i]=='d'){
-            array.push('4');
-        }else if(input[i]=='e'){
-            array.push('5');
-        }
+        str += input[i];
+        array.push(str.charCodeAt(i)-96);
     }
     return `[${array.join(', ')}]`;
     }
