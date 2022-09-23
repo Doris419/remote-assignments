@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <input type="text" id = "input">
+    </div>
+    <div>
+        <button id = "btn">Calculate</button>
+    </div>
+    <div>
+        <p id="ajax"></p>
+    </div>
+    <script>
+    var input = document.getElementById("input");
+    const btn = document.querySelector('#btn');
+    const answer = document.querySelector('#ajax');
+    const ans="";
+    function getApp(url){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET',url);
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4 && xhr.status === 200){
+            document.querySelector('#ajax').innerHTML=JSON.parse(xhr.responseText);
+            console.log(xhr.responseText);
+            }
+        }
+    }   
+        btn.addEventListener('click', () => {
+            getApp(`http://localhost:3000/data?number=${input.value}`)
+        });
+    </script>
+</body>
